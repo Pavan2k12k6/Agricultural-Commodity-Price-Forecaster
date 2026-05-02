@@ -1,0 +1,9 @@
+Price volatility ranking (daily std deviation):
+  rice: 2.177
+  wheat: 1.914
+  maize: 1.458
+
+Mean price level snapshot:
+  maize: 25.374
+  rice: 39.222
+  wheat: 32.731

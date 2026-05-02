@@ -1,0 +1,22 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: .
+    command:
+      [
+        "streamlit",
+        "run",
+        "frontend/streamlit_app.py",
+        "--server.port",
+        "8501",
+        "--server.address",
+        "0.0.0.0",
+      ]
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api

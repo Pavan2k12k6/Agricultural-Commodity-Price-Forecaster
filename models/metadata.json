@@ -1,0 +1,79 @@
+{
+  "commodities": [
+    "maize",
+    "rice",
+    "wheat"
+  ],
+  "supervised_cols": [
+    "temp_c",
+    "rainfall_mm",
+    "humidity_pct",
+    "month",
+    "quarter",
+    "dayofyear",
+    "price_lag1",
+    "price_lag7",
+    "price_lag30",
+    "roll_mean_7",
+    "roll_mean_30",
+    "month_sin",
+    "month_cos"
+  ],
+  "arima_exog_cols": [
+    "temp_c",
+    "rainfall_mm",
+    "humidity_pct",
+    "month",
+    "quarter",
+    "dayofyear"
+  ],
+  "evaluation_metrics_holdout_cv": {
+    "maize": {
+      "arima_holdout": {
+        "rmse": 13.394288551500876,
+        "mae": 10.857002494701675
+      },
+      "xgb_holdout": {
+        "rmse": 5.870477812617745,
+        "mae": 4.437007359095982
+      },
+      "xgboost_time_series_cv": {
+        "cv_rmse_mean": 9.190792331203273,
+        "cv_mae_mean": 6.501426696777344,
+        "cv_folds": 5
+      }
+    },
+    "rice": {
+      "arima_holdout": {
+        "rmse": 67.20416620182759,
+        "mae": 59.40710373589254
+      },
+      "xgb_holdout": {
+        "rmse": 94.28233938866754,
+        "mae": 84.31989604924001
+      },
+      "xgboost_time_series_cv": {
+        "cv_rmse_mean": 98.12302328197238,
+        "cv_mae_mean": 76.97020653034079,
+        "cv_folds": 5
+      }
+    },
+    "wheat": {
+      "arima_holdout": {
+        "rmse": 46.09640222815709,
+        "mae": 37.43879209694761
+      },
+      "xgb_holdout": {
+        "rmse": 10.915566986532026,
+        "mae": 8.185750325520834
+      },
+      "xgboost_time_series_cv": {
+        "cv_rmse_mean": 9.944072214221134,
+        "cv_mae_mean": 7.692693776097791,
+        "cv_folds": 5
+      }
+    }
+  },
+  "data_path_used": "C:\\Users\\pavan\\OneDrive\\Desktop\\Agri\\data\\raw\\commodities.csv",
+  "production_note": "Saved XGB artifacts use StandardScaler fit on supervised rows."
+}
